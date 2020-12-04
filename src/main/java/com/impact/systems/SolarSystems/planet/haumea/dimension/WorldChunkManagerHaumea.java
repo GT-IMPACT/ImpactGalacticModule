@@ -1,6 +1,6 @@
-package com.impact.systems.SolarSystems.haumea.dimension;
+package com.impact.systems.SolarSystems.planet.haumea.dimension;
 
-import com.impact.systems.SolarSystems.haumea.world.gen.layer.GenLayerHaumea;
+import com.impact.systems.SolarSystems.planet.haumea.world.gen.layer.GenLayerHaumea;
 import galaxyspace.core.world.gen.GSBiomeGenBase;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldChunkManagerSpace;
 import net.minecraft.world.ChunkPosition;

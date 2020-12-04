@@ -1,4 +1,4 @@
-package com.impact.systems.SolarSystems.makemake.world.gen.layer;
+package com.impact.systems.SolarSystems.planet.makemake.world.gen.layer;
 
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.GenLayerRiver;

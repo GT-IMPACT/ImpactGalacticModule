@@ -1,4 +1,4 @@
-package com.impact.systems.SolarSystems.haumea.world.gen.layer;
+package com.impact.systems.SolarSystems.planet.haumea.world.gen.layer;
 
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.GenLayerRiver;

@@ -1,12 +1,12 @@
-package com.impact.systems.SolarSystems.haumea.world.gen;
+package com.impact.systems.SolarSystems.planet.makemake.world.gen;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import net.minecraft.world.World;
 
-public class BiomeDecoratorHaumea extends BiomeDecoratorSpace {
+public class BiomeDecoratorMakemake extends BiomeDecoratorSpace {
     private World world;
 
-    public BiomeDecoratorHaumea() {
+    public BiomeDecoratorMakemake() {
     }
 
     protected void decorate() {

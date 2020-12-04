@@ -1,4 +1,4 @@
-package com.impact.systems.SolarSystems.haumea.dimension.sky;
+package com.impact.systems.SolarSystems.planet.makemake.dimension.sky;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import galaxyspace.GalaxySpace;
@@ -8,14 +8,14 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
-public class SkyProviderHaumea extends SkyProviderBase {
+public class SkyProviderMakemake extends SkyProviderBase {
     private static final ResourceLocation charonTexture;
 
     static {
         charonTexture = new ResourceLocation(GalaxySpace.ASSET_PREFIX, "textures/gui/celestialbodies/sol/moons/charon.png");
     }
 
-    public SkyProviderHaumea() {
+    public SkyProviderMakemake() {
     }
 
     protected void rendererSky(Tessellator tessellator, float f10, float ticks) {

@@ -1,6 +1,6 @@
-package com.impact.systems.SolarSystems.makemake.dimension;
+package com.impact.systems.SolarSystems.planet.makemake.dimension;
 
-import com.impact.systems.SolarSystems.makemake.world.gen.layer.GenLayerMakemake;
+import com.impact.systems.SolarSystems.planet.makemake.world.gen.layer.GenLayerMakemake;
 import galaxyspace.core.world.gen.GSBiomeGenBase;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldChunkManagerSpace;
 import net.minecraft.world.ChunkPosition;

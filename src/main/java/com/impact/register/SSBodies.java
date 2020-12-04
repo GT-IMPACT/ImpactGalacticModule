@@ -2,19 +2,15 @@ package com.impact.register;
 
 import com.impact.ImpactGalacticModule;
 import com.impact.core.Config;
-import com.impact.systems.SolarSystems.haumea.dimension.WorldProviderHaumea;
-import com.impact.systems.SolarSystems.makemake.dimension.WorldProviderMakemake;
+import com.impact.systems.SolarSystems.planet.haumea.dimension.WorldProviderHaumea;
+import com.impact.systems.SolarSystems.planet.makemake.dimension.WorldProviderMakemake;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import galaxyspace.GalaxySpace;
 import galaxyspace.api.BodiesHelper;
 import galaxyspace.api.IBodiesHandler;
 import galaxyspace.core.configs.GSConfigCore;
-import galaxyspace.core.configs.GSConfigDimensions;
-import galaxyspace.core.registers.items.GSItems;
 import galaxyspace.systems.SolarSystem.SolarSystemBodies;
-import ic2.api.item.IC2Items;
 import ic2.core.Ic2Items;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
@@ -64,7 +60,10 @@ public class SSBodies implements IBodiesHandler {
         SolarSystem sol = GalacticraftCore.solarSystemSol;
         SolarSystemBodies.planetMakemake  = (Planet) BodiesHelper.registerPlanet(sol, "makemake", ImpactGalacticModule.TEXTURE_PATH, WorldProviderMakemake.class, Config.dimensionIDMakeMake, 7, 11.5f, 1.2F, 3.75f, 300.0f).atmosphereComponent(IAtmosphericGas.NITROGEN).setRingColorRGB(0.1f, 0.9f, 0.6f);
         SolarSystemBodies.planetHaumea = (Planet) BodiesHelper.registerPlanet(sol, "haumea", ImpactGalacticModule.TEXTURE_PATH, WorldProviderHaumea.class, Config.dimensionIDHaumea, 7, 21.5f, 1.2F, 3.5F, 280.0f).setRingColorRGB(0.1f, 0.9f, 0.6f);
-        
+
+        SolarSystemBodies.phobosMars = BodiesHelper.registerMoon(GSConfigCore.enableGCMars ? MarsModule.planetMars : SolarSystemBodies.planetMars, "phobos", ImpactGalacticModule.TEXTURE_PATH, null, Config.dimensionIDPhobos, 2, 1.0F, 0.0017F, 8.0F, 100.0F);
+        SolarSystemBodies.deimosMars = BodiesHelper.registerMoon(GSConfigCore.enableGCMars ? MarsModule.planetMars : SolarSystemBodies.planetMars, "deimos", ImpactGalacticModule.TEXTURE_PATH, null, Config.dimensionIDDeimos, 2, 1.0F, 0.0017F, 16.0F, 300.0F);
+
         SSBodies.registrycelestial();
         SSBodies.registryteleport();
     }

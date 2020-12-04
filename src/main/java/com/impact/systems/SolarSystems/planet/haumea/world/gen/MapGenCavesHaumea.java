@@ -1,4 +1,4 @@
-package com.impact.systems.SolarSystems.haumea.world.gen;
+package com.impact.systems.SolarSystems.planet.haumea.world.gen;
 
 import com.impact.register.IGM_Blocks;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;

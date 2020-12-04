@@ -1,38 +1,38 @@
-package com.impact.systems.SolarSystems.makemake.world.gen.layer;
+package com.impact.systems.SolarSystems.planet.haumea.world.gen.layer;
 
 import galaxyspace.core.world.gen.GSBiomeGenBase;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
-public class GenLayerMakemakeBiomes extends GenLayer {
+public class GenLayerHaumeaBiomes extends GenLayer {
     protected BiomeGenBase[] commonBiomes;
     protected BiomeGenBase[] rareBiomes;
 
-    public GenLayerMakemakeBiomes(long seed, GenLayer genlayer) {
+    public GenLayerHaumeaBiomes(long seed, GenLayer genlayer) {
         super(seed);
         this.commonBiomes = new BiomeGenBase[]{
-              GSBiomeGenBase.GSSpace.setBiomeName("Makemake"),
-              GSBiomeGenBase.GSSpaceLowPlains.setBiomeName("MakemakeLowPlains"),
-              GSBiomeGenBase.GSSpaceLowHills.setBiomeName("MakemakeLowHills"),
-              GSBiomeGenBase.GSSpaceMidPlains.setBiomeName("MakemakeMidPlains")
+              GSBiomeGenBase.GSSpace.setBiomeName("Haumea"),
+              GSBiomeGenBase.GSSpaceLowPlains.setBiomeName("HaumeaLowPlains"),
+              GSBiomeGenBase.GSSpaceLowHills.setBiomeName("HaumeaLowHills"),
+              GSBiomeGenBase.GSSpaceMidPlains.setBiomeName("HaumeaMidPlains")
         };
         this.rareBiomes = new BiomeGenBase[]{
-                GSBiomeGenBase.GSSpace.setBiomeName("Makemake"),
+                GSBiomeGenBase.GSSpace.setBiomeName("Haumea"),
         };
         this.parent = genlayer;
     }
 
-    public GenLayerMakemakeBiomes(long seed) {
+    public GenLayerHaumeaBiomes(long seed) {
         super(seed);
         this.commonBiomes = new BiomeGenBase[]{
-                GSBiomeGenBase.GSSpace.setBiomeName("Makemake"),
-                GSBiomeGenBase.GSSpaceLowPlains.setBiomeName("MakemakeLowPlains"),
-                GSBiomeGenBase.GSSpaceLowHills.setBiomeName("MakemakeLowHills"),
-                GSBiomeGenBase.GSSpaceMidPlains.setBiomeName("MakemakeMidPlains")
+                GSBiomeGenBase.GSSpace.setBiomeName("Haumea"),
+                GSBiomeGenBase.GSSpaceLowPlains.setBiomeName("HaumeaLowPlains"),
+                GSBiomeGenBase.GSSpaceLowHills.setBiomeName("HaumeaLowHills"),
+                GSBiomeGenBase.GSSpaceMidPlains.setBiomeName("HaumeaMidPlains")
         };
         this.rareBiomes = new BiomeGenBase[]{
-                GSBiomeGenBase.GSSpace.setBiomeName("Makemake"),
+                GSBiomeGenBase.GSSpace.setBiomeName("Haumea"),
         };
     }
 

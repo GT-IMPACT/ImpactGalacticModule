@@ -1,6 +1,6 @@
-package com.impact.systems.SolarSystems.haumea.dimension;
+package com.impact.systems.SolarSystems.planet.haumea.dimension;
 
-import com.impact.systems.SolarSystems.haumea.dimension.sky.SkyProviderHaumea;
+import com.impact.systems.SolarSystems.planet.haumea.dimension.sky.SkyProviderHaumea;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import galaxyspace.api.dimension.IAdvancedSpace;

@@ -1,10 +1,9 @@
-package com.impact.systems.SolarSystems.makemake.dimension;
+package com.impact.systems.SolarSystems.planet.haumea.dimension;
 
 import com.google.common.collect.Lists;
 import com.impact.register.IGM_Blocks;
-import com.impact.systems.SolarSystems.makemake.world.gen.BiomeDecoratorMakemake;
-import com.impact.systems.SolarSystems.makemake.world.gen.MapGenCavesMakemake;
-import galaxyspace.core.registers.blocks.GSBlocks;
+import com.impact.systems.SolarSystems.planet.haumea.world.gen.BiomeDecoratorHaumea;
+import com.impact.systems.SolarSystems.planet.haumea.world.gen.MapGenCavesHaumea;
 import galaxyspace.core.world.gen.ChunkProviderSpaceLakes;
 import galaxyspace.core.world.gen.GSBiomeGenBase;
 import galaxyspace.core.world.gen.GS_GenBlocks;
@@ -18,15 +17,15 @@ import net.minecraft.world.chunk.IChunkProvider;
 
 import java.util.List;
 
-public class ChunkProviderMakemake extends ChunkProviderSpaceLakes {
-    private final MapGenCavesMakemake caveGenerator = new MapGenCavesMakemake();
+public class ChunkProviderHaumea extends ChunkProviderSpaceLakes {
+    private final MapGenCavesHaumea caveGenerator = new MapGenCavesHaumea();
 
-    public ChunkProviderMakemake(World par1World, long seed, boolean mapFeaturesEnabled) {
+    public ChunkProviderHaumea(World par1World, long seed, boolean mapFeaturesEnabled) {
         super(par1World, seed, mapFeaturesEnabled);
-        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[0], new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
-        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[1], new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
-        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[2], new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 1), this.getDirtBlock(), this.getStoneBlock()));
-        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[3], new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 1), this.getDirtBlock(), this.getStoneBlock()));
+        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[0], new BlockMetaPair(IGM_Blocks.HaumeaBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
+        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[1], new BlockMetaPair(IGM_Blocks.HaumeaBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
+        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[2], new BlockMetaPair(IGM_Blocks.HaumeaBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
+        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[3], new BlockMetaPair(IGM_Blocks.HaumeaBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
     }
 
     protected List<MapGenBaseMeta> getWorldGenerators() {
@@ -36,15 +35,15 @@ public class ChunkProviderMakemake extends ChunkProviderSpaceLakes {
     }
 
     protected BiomeDecoratorSpace getBiomeGenerator() {
-        return new BiomeDecoratorMakemake();
+        return new BiomeDecoratorHaumea();
     }
 
     protected BiomeGenBase[] getBiomesForGeneration() {
         return new BiomeGenBase[]{
-                GSBiomeGenBase.GSSpace.setBiomeName("Makemake"),
-                GSBiomeGenBase.GSSpaceLowPlains.setBiomeName("MakemakeLowPlains"),
-                GSBiomeGenBase.GSSpaceLowHills.setBiomeName("MakemakeLowHills"),
-                GSBiomeGenBase.GSSpaceMidPlains.setBiomeName("MakemakeMidPlains")
+                GSBiomeGenBase.GSSpace.setBiomeName("Haumea"),
+                GSBiomeGenBase.GSSpaceLowPlains.setBiomeName("HaumeaLowPlains"),
+                GSBiomeGenBase.GSSpaceLowHills.setBiomeName("HaumeaLowHills"),
+                GSBiomeGenBase.GSSpaceMidPlains.setBiomeName("HaumeaMidPlains")
         };
     }
 
@@ -95,15 +94,15 @@ public class ChunkProviderMakemake extends ChunkProviderSpaceLakes {
     }
 
     protected BlockMetaPair getGrassBlock() {
-        return new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 0);
+        return new BlockMetaPair(IGM_Blocks.HaumeaBlocks, (byte) 0);
     }
 
     protected BlockMetaPair getDirtBlock() {
-        return new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 1);
+        return new BlockMetaPair(IGM_Blocks.HaumeaBlocks, (byte) 0);
     }
 
     protected BlockMetaPair getStoneBlock() {
-        return new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 1);
+        return new BlockMetaPair(IGM_Blocks.HaumeaBlocks, (byte) 0);
     }
 
     protected boolean enableBiomeGenBaseBlock() {

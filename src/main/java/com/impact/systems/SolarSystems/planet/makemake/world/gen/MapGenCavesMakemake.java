@@ -1,7 +1,6 @@
-package com.impact.systems.SolarSystems.makemake.world.gen;
+package com.impact.systems.SolarSystems.planet.makemake.world.gen;
 
 import com.impact.register.IGM_Blocks;
-import galaxyspace.core.registers.blocks.GSBlocks;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;

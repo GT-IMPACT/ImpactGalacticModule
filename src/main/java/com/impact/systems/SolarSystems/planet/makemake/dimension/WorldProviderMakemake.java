@@ -1,6 +1,6 @@
-package com.impact.systems.SolarSystems.makemake.dimension;
+package com.impact.systems.SolarSystems.planet.makemake.dimension;
 
-import com.impact.systems.SolarSystems.makemake.dimension.sky.SkyProviderMakemake;
+import com.impact.systems.SolarSystems.planet.makemake.dimension.sky.SkyProviderMakemake;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import galaxyspace.api.dimension.IAdvancedSpace;
