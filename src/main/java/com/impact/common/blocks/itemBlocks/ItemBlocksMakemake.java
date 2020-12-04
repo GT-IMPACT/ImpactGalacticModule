@@ -23,7 +23,7 @@ public class ItemBlocksMakemake extends ItemBlock {
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName() + "." + stack.getItemDamage();
+    public String getUnlocalizedName(ItemStack is) {
+        return super.getUnlocalizedName() + "." + is.getItemDamage();
     }
 }

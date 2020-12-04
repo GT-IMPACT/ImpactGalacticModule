@@ -1,0 +1,10 @@
+[
+{
+  "modid": "Impact|GalacticModule",
+  "name": "Impact | Galactic Module",
+  "description": "Example placeholder mod.",
+  "version": "0.0.1",
+  "mcversion": "1.7.10",
+  "authorList": ["4gname"],
+}
+]
