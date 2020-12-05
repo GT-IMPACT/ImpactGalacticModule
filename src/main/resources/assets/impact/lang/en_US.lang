@@ -1,6 +1,8 @@
 tile.MakemakeBlocks.0.name=Makemake Ground
 tile.MakemakeBlocks.1.name=Makemake Subground
 tile.HaumeaBlocks.0.name=Haumea Ground
-tile.PhobosRock.0.name=Phobos Ground
-tile.PhobosRock.1.name=Phobos Subground
-tile.PhobosRock.2.name=Phobos Stone
+tile.PhobosBlocks.0.name=Phobos Ground
+tile.PhobosBlocks.1.name=Phobos Subground
+tile.PhobosBlocks.2.name=Phobos Stone
+tile.DeimosBlocks.0.name=Deimos Ground
+tile.DeimosBlocks.1.name=Deimos Subground

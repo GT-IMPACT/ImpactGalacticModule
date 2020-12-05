@@ -17,17 +17,17 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class PhobosBlocks
+public class DeimosBlocks
         extends Block
         implements ITerraformableBlock {
-    public static String[] metadata = new String[]{"PhobosGrunt", "PhobosSubGrunt", "PhobosStone"};
+    public static String[] metadata = new String[]{"DeimosGrunt", "DeimosSubGrunt"};
     protected IIcon[] textures;
 
 
-    public PhobosBlocks() {
+    public DeimosBlocks() {
         super(Material.rock);
         this.textures = new IIcon[metadata.length];
-        setBlockName("PhobosBlocks");
+        setBlockName("DeimosBlocks");
         setHardness(3.0F);
         setStepSound(Block.soundTypeStone);
         setHarvestLevel("pickaxe", 1);
@@ -52,8 +52,8 @@ public class PhobosBlocks
 
     public void registerBlockIcons(IIconRegister iconRegister) {
         super.registerBlockIcons(iconRegister);
-        for (int i = 0; i < metadata.length; i++)
-            this.textures[i] = iconRegister.registerIcon(ImpactGalacticModule.TEXTURE_PATH + ":solarsystem/phobos/" + metadata[i].toLowerCase());
+        this.textures[0] = iconRegister.registerIcon(ImpactGalacticModule.TEXTURE_PATH + ":solarsystem/deimos/deimosgrunt");
+        this.textures[1] = iconRegister.registerIcon(ImpactGalacticModule.TEXTURE_PATH + ":solarsystem/deimos/deimossubgrunt");
     }
 
     @SideOnly(Side.CLIENT)
