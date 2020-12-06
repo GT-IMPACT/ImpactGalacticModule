@@ -36,6 +36,11 @@ public class WorldProviderHaumea extends WorldProviderAdvancedSpace implements I
         return s * s * s * ConfigManagerCore.spaceStationEnergyScalar;
     }
 
+    @Override
+    public String getDimensionName() {
+        return "Haumea";
+    }
+
     public double getHorizon() {
         return 44.0D;
     }

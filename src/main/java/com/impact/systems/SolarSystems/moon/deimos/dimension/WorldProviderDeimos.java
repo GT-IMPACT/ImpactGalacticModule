@@ -31,6 +31,11 @@ public class WorldProviderDeimos extends WorldProviderAdvancedSpace implements I
     public WorldProviderDeimos() {
     }
 
+    @Override
+    public String getDimensionName() {
+        return "Deimos";
+    }
+
     public double getSolarEnergyMultiplier() {
         return 0.8D;
     }

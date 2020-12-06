@@ -24,8 +24,8 @@ public class ChunkProviderPhobos extends ChunkProviderSpaceLakes {
         super(par1World, seed, mapFeaturesEnabled);
         setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[0], new BlockMetaPair(IGM_Blocks.PhobosBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
         setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[1], new BlockMetaPair(IGM_Blocks.PhobosBlocks, (byte) 1), this.getDirtBlock(), this.getStoneBlock()));
-        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[2], new BlockMetaPair(IGM_Blocks.PhobosBlocks, (byte) 2), this.getDirtBlock(), this.getStoneBlock()));
-        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[3], new BlockMetaPair(IGM_Blocks.PhobosBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
+        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[2], new BlockMetaPair(IGM_Blocks.PhobosBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
+        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[3], new BlockMetaPair(IGM_Blocks.PhobosBlocks, (byte) 1), this.getDirtBlock(), this.getStoneBlock()));
     }
 
     protected List<MapGenBaseMeta> getWorldGenerators() {
@@ -102,7 +102,7 @@ public class ChunkProviderPhobos extends ChunkProviderSpaceLakes {
     }
 
     protected BlockMetaPair getStoneBlock() {
-        return new BlockMetaPair(IGM_Blocks.PhobosBlocks, (byte) 2);
+        return new BlockMetaPair(IGM_Blocks.PhobosBlocks, (byte) 1);
     }
 
     protected boolean enableBiomeGenBaseBlock() {

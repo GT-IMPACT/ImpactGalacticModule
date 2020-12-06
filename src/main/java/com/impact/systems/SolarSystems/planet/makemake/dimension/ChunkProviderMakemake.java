@@ -22,10 +22,10 @@ public class ChunkProviderMakemake extends ChunkProviderSpaceLakes {
 
     public ChunkProviderMakemake(World par1World, long seed, boolean mapFeaturesEnabled) {
         super(par1World, seed, mapFeaturesEnabled);
-        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[0], new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
+        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[0], new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 1), this.getDirtBlock(), this.getStoneBlock()));
         setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[1], new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
         setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[2], new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 1), this.getDirtBlock(), this.getStoneBlock()));
-        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[3], new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 1), this.getDirtBlock(), this.getStoneBlock()));
+        setBlocks(new GS_GenBlocks(this.worldObj.provider, this.getBiomesForGeneration()[3], new BlockMetaPair(IGM_Blocks.MakeMakeBlocks, (byte) 0), this.getDirtBlock(), this.getStoneBlock()));
     }
 
     protected List<MapGenBaseMeta> getWorldGenerators() {

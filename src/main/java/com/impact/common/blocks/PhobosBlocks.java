@@ -20,7 +20,7 @@ import java.util.List;
 public class PhobosBlocks
         extends Block
         implements ITerraformableBlock {
-    public static String[] metadata = new String[]{"PhobosGrunt", "PhobosSubGrunt", "PhobosStone"};
+    public static String[] metadata = new String[]{"PhobosGrunt", "PhobosSubGrunt"};
     protected IIcon[] textures;
 
 

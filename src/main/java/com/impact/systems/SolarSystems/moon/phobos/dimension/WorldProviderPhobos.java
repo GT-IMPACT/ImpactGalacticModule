@@ -35,6 +35,11 @@ public class WorldProviderPhobos extends WorldProviderAdvancedSpace implements I
         return 0.8D;
     }
 
+    @Override
+    public String getDimensionName() {
+        return "Phobos";
+    }
+
     public double getHorizon() {
         return 44.0D;
     }

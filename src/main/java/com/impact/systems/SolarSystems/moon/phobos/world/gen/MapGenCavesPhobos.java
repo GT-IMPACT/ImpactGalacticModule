@@ -133,8 +133,6 @@ public class MapGenCavesPhobos extends MapGenBaseMeta {
                                             blockIdArray[coords] = Blocks.air;
                                         } else if (blockIdArray[coords] == IGM_Blocks.PhobosBlocks && metaArray[coords] == 1) {
                                             blockIdArray[coords] = Blocks.air;
-                                        } else if (blockIdArray[coords] == IGM_Blocks.PhobosBlocks && metaArray[coords] == 2) {
-                                            blockIdArray[coords] = Blocks.air;
                                         }
                                     }
                                 }

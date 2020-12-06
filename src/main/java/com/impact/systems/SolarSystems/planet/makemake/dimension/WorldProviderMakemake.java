@@ -37,6 +37,11 @@ public class WorldProviderMakemake extends WorldProviderAdvancedSpace implements
     }
 
     @Override
+    public String getDimensionName() {
+        return "Makemake";
+    }
+
+    @Override
     public long getDayLength() {
         return 98000L;
     }

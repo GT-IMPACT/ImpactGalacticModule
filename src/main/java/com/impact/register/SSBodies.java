@@ -1,7 +1,6 @@
 package com.impact.register;
 
 import com.impact.ImpactGalacticModule;
-import com.impact.core.Config;
 import com.impact.systems.SolarSystems.moon.deimos.dimension.WorldProviderDeimos;
 import com.impact.systems.SolarSystems.moon.phobos.dimension.WorldProviderPhobos;
 import com.impact.systems.SolarSystems.planet.haumea.dimension.WorldProviderHaumea;
@@ -22,6 +21,19 @@ import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import net.minecraft.item.ItemStack;
 
 public class SSBodies implements IBodiesHandler {
+
+
+    /**
+     *   ID Dimensions GalaxySpace: 2000 - 2050
+     *   ID Dimensions Impact Galactic Module 2050 - 2100
+     */
+
+    public static int dimensionIDEmpty = -1;
+    public static int dimensionIDMakeMake = -2050;
+    public static int dimensionIDHaumea = -2051;
+    public static int dimensionIDPhobos = -2052;
+    public static int dimensionIDDeimos = -2053;
+    public static int dimensionIDJupiter = -2054;
 
     public SSBodies() {}
 
@@ -67,11 +79,11 @@ public class SSBodies implements IBodiesHandler {
     @Override
     public void init(FMLInitializationEvent fmlInitializationEvent) {
         SolarSystem sol = GalacticraftCore.solarSystemSol;
-        SolarSystemBodies.planetMakemake  = (Planet) BodiesHelper.registerPlanet(sol, "makemake", ImpactGalacticModule.TEXTURE_PATH, WorldProviderMakemake.class, Config.dimensionIDMakeMake, 7, 11.5f, 1.2F, 3.75f, 300.0f).atmosphereComponent(IAtmosphericGas.NITROGEN).setRingColorRGB(0.1f, 0.9f, 0.6f);
-        SolarSystemBodies.planetHaumea = (Planet) BodiesHelper.registerPlanet(sol, "haumea", ImpactGalacticModule.TEXTURE_PATH, WorldProviderHaumea.class, Config.dimensionIDHaumea, 7, 21.5f, 1.2F, 3.5F, 280.0f).setRingColorRGB(0.1f, 0.9f, 0.6f);
+        SolarSystemBodies.planetMakemake  = (Planet) BodiesHelper.registerPlanet(sol, "makemake", ImpactGalacticModule.TEXTURE_PATH, WorldProviderMakemake.class, dimensionIDMakeMake, 7, 11.5f, 1.2F, 3.75f, 300.0f).atmosphereComponent(IAtmosphericGas.NITROGEN).setRingColorRGB(0.1f, 0.9f, 0.6f);
+        SolarSystemBodies.planetHaumea = (Planet) BodiesHelper.registerPlanet(sol, "haumea", ImpactGalacticModule.TEXTURE_PATH, WorldProviderHaumea.class, dimensionIDHaumea, 7, 21.5f, 1.2F, 3.5F, 280.0f).setRingColorRGB(0.1f, 0.9f, 0.6f);
 
-        SolarSystemBodies.phobosMars = BodiesHelper.registerMoon(MarsModule.planetMars, "phobos", ImpactGalacticModule.TEXTURE_PATH, WorldProviderPhobos.class, Config.dimensionIDPhobos, 2, 1.0F, 0.0017F, 8.0F, 100.0F);
-        SolarSystemBodies.deimosMars = BodiesHelper.registerMoon(MarsModule.planetMars, "deimos", ImpactGalacticModule.TEXTURE_PATH, WorldProviderDeimos.class, Config.dimensionIDDeimos, 2, 1.0F, 0.0017F, 16.0F, 300.0F);
+        SolarSystemBodies.phobosMars = BodiesHelper.registerMoon(MarsModule.planetMars, "phobos", ImpactGalacticModule.TEXTURE_PATH, WorldProviderPhobos.class, dimensionIDPhobos, 2, 1.0F, 0.0017F, 8.0F, 100.0F);
+        SolarSystemBodies.deimosMars = BodiesHelper.registerMoon(MarsModule.planetMars, "deimos", ImpactGalacticModule.TEXTURE_PATH, WorldProviderDeimos.class, dimensionIDDeimos, 2, 1.0F, 0.0017F, 16.0F, 300.0F);
 
         SSBodies.registrycelestial();
         SSBodies.registryteleport();
