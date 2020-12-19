@@ -1,5 +1,6 @@
 package com.impact.systems.SolarSystems.planet.oberon.dimension.sky;
 
+import com.impact.ImpactGalacticModule;
 import cpw.mods.fml.client.FMLClientHandler;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.client.Minecraft;
@@ -20,13 +21,13 @@ import static com.impact.ImpactGalacticModule.TEXTURE_PATH;
 
 public class SkyProviderOberon extends IRenderHandler {
     private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
-    private static final ResourceLocation uranusTexture = new ResourceLocation(TEXTURE_PATH, "textures/gui/celestialbodies/sol/uranus.png");
-    private static final ResourceLocation uranusRingsTexture = new ResourceLocation(TEXTURE_PATH, "textures/gui/celestialbodies/sol/uranus_rings.png");
-    private static final ResourceLocation lmcTexture = new ResourceLocation(TEXTURE_PATH, "textures/environment/background/LMC.png");
-    private static final ResourceLocation smcTexture = new ResourceLocation(TEXTURE_PATH, "textures/environment/background/SMC.png");
-    private static final ResourceLocation andromedaTexture = new ResourceLocation(TEXTURE_PATH, "textures/environment/background/Andromeda.png");
-    private static final ResourceLocation oberonTexture = new ResourceLocation(TEXTURE_PATH, "textures/gui/celestialbodies/sol/moons/oberon.png");
-    private static final ResourceLocation barnardaloopTexture = new ResourceLocation(TEXTURE_PATH, "textures/environment/background/BarnardaLoop.png");
+    private static final ResourceLocation uranusTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/gui/celestialbodies/sol/uranus.png");
+    private static final ResourceLocation uranusRingsTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/gui/celestialbodies/sol/uranus_rings.png");
+    private static final ResourceLocation lmcTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/environment/background/LMC.png");
+    private static final ResourceLocation smcTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/environment/background/SMC.png");
+    private static final ResourceLocation andromedaTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/environment/background/Andromeda.png");
+    private static final ResourceLocation oberonTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/gui/celestialbodies/sol/moons/oberon.png");
+    private static final ResourceLocation barnardaloopTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/environment/background/BarnardaLoop.png");
     public int starList;
     public int glSkyList;
     public int glSkyList2;

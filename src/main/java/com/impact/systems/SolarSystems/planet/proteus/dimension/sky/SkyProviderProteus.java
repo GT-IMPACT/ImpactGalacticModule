@@ -1,5 +1,6 @@
 package com.impact.systems.SolarSystems.planet.proteus.dimension.sky;
 
+import com.impact.ImpactGalacticModule;
 import cpw.mods.fml.client.FMLClientHandler;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.client.Minecraft;
@@ -36,12 +37,12 @@ import static com.impact.ImpactGalacticModule.TEXTURE_PATH;
 
 public class SkyProviderProteus extends IRenderHandler {
     private static final ResourceLocation sunTexture = new ResourceLocation("textures/environment/sun.png");
-    private static final ResourceLocation neptuneTexture = new ResourceLocation(TEXTURE_PATH, "textures/gui/celestialbodies/sol/neptune.png");
-    private static final ResourceLocation lmcTexture = new ResourceLocation(TEXTURE_PATH, "textures/environment/background/LMC.png");
-    private static final ResourceLocation smcTexture = new ResourceLocation(TEXTURE_PATH, "textures/environment/background/SMC.png");
-    private static final ResourceLocation andromedaTexture = new ResourceLocation(TEXTURE_PATH, "textures/environment/background/Andromeda.png");
-    private static final ResourceLocation proteusTexture = new ResourceLocation(TEXTURE_PATH, "textures/gui/celestialbodies/sol/moons/proteus.png");
-    private static final ResourceLocation barnardaloopTexture = new ResourceLocation(TEXTURE_PATH, "textures/environment/background/BarnardaLoop.png");
+    private static final ResourceLocation neptuneTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/gui/celestialbodies/sol/neptune.png");
+    private static final ResourceLocation lmcTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/environment/background/LMC.png");
+    private static final ResourceLocation smcTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/environment/background/SMC.png");
+    private static final ResourceLocation andromedaTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/environment/background/Andromeda.png");
+    private static final ResourceLocation proteusTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/gui/celestialbodies/sol/moons/proteus.png");
+    private static final ResourceLocation barnardaloopTexture = new ResourceLocation(ImpactGalacticModule.TEXTURE_PATH, "textures/environment/background/BarnardaLoop.png");
     public int starList;
     public int glSkyList;
     public int glSkyList2;
