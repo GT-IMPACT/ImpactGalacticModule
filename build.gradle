@@ -37,7 +37,7 @@ allprojects {
     targetCompatibility = 1.8
 }
 
-version = "0.0.1"
+version = "0.0.2"
 group = "impact"
 archivesBaseName = "Impact-GalacticModule"
 
@@ -49,7 +49,7 @@ minecraft {
 repositories {}
 
 dependencies {
-    compile files("lib/GalaxySpace-1.7.10-1.2.14-impact-dev.jar")
+    compile files("lib/GalaxySpace-1.2.14.02-impact-dev.jar")
     compile files("lib/buildcraft-7.1.13-dev.jar")
     compile files("lib/CodeChickenCore-1.7.10-1.0.7.47-universal.jar")
     compile files("lib/CodeChickenLib-1.7.10-1.1.3.138-universal.jar")
