@@ -12,3 +12,5 @@ tile.OberonBlocks.2.name=Oberon Stone
 tile.ProteusBlocks.0.name=Proteus Ground
 tile.ProteusBlocks.1.name=Proteus Subground
 tile.ProteusBlocks.2.name=Proteus Stone
+
+moon.spaceStation=Space Station

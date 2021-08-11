@@ -1,9 +1,11 @@
 package com.impact;
 
 import com.impact.proxy.CommonProxy;
+import com.impact.proxy.WorldTick;
 import com.impact.register.IGM_Blocks;
 import com.impact.register.IGM_Items;
 import com.impact.register.SSBodies;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.ModMetadata;
@@ -12,6 +14,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import galaxyspace.api.IBodiesHandler;
+import micdoodle8.mods.galacticraft.core.tick.TickHandlerServer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -72,6 +75,7 @@ public class ImpactGalacticModule {
         for (IBodiesHandler list : bodies) {
             list.postInit(event);
         }
+        FMLCommonHandler.instance().bus().register(new WorldTick());
     }
 
     private void initModInfo(ModMetadata info) {

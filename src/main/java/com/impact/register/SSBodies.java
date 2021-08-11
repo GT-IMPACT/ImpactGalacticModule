@@ -2,6 +2,7 @@ package com.impact.register;
 
 import com.impact.ImpactGalacticModule;
 import com.impact.systems.SolarSystems.moon.deimos.dimension.WorldProviderDeimos;
+import com.impact.systems.SolarSystems.moon.orbit.WorldProviderOrbit;
 import com.impact.systems.SolarSystems.moon.phobos.dimension.WorldProviderPhobos;
 import com.impact.systems.SolarSystems.planet.haumea.dimension.WorldProviderHaumea;
 import com.impact.systems.SolarSystems.planet.makemake.dimension.WorldProviderMakemake;
@@ -13,10 +14,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import galaxyspace.GalaxySpace;
 import galaxyspace.api.BodiesHelper;
 import galaxyspace.api.IBodiesHandler;
-import galaxyspace.core.configs.GSConfigDimensions;
 import galaxyspace.systems.SolarSystem.SolarSystemBodies;
 import ic2.core.Ic2Items;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.galaxies.Moon;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import micdoodle8.mods.galacticraft.api.world.IAtmosphericGas;
@@ -25,6 +26,8 @@ import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import net.minecraft.item.ItemStack;
 
 public class SSBodies implements IBodiesHandler {
+
+    public static Moon orbitEarth;
 
 
     /**
@@ -40,6 +43,7 @@ public class SSBodies implements IBodiesHandler {
     public static int dimensionIDJupiter = -2054;
     public static int dimensionIDProteus = -2055;
     public static int dimensionIDOberon = -2056;
+    public static int dimensionIDOrbitEarth = -2057;
 
 
     public SSBodies() {}
@@ -74,6 +78,9 @@ public class SSBodies implements IBodiesHandler {
         data = new BodiesHelper.BodiesData(null, 0.058F, 0, -4.0F, 0.0F, 24000L, false, false);
         BodiesHelper.registerBody(SolarSystemBodies.proteusNeptune, data, true);
 
+        data = new BodiesHelper.BodiesData(null, 0.058F, 0, 0F, 0.0F, 24000L, false, false);
+        BodiesHelper.registerBody(orbitEarth, data, true);
+
     }
 
     private static void registryteleport() {
@@ -83,6 +90,7 @@ public class SSBodies implements IBodiesHandler {
         GalacticraftRegistry.registerTeleportType(WorldProviderDeimos.class, new WorldProviderDeimos());
         GalacticraftRegistry.registerTeleportType(WorldProviderOberon.class, new WorldProviderOberon());
         GalacticraftRegistry.registerTeleportType(WorldProviderProteus.class, new WorldProviderProteus());
+        GalacticraftRegistry.registerTeleportType(WorldProviderOrbit.class, new WorldProviderOrbit());
     }
 
 
@@ -104,6 +112,7 @@ public class SSBodies implements IBodiesHandler {
 
         SolarSystemBodies.proteusNeptune = BodiesHelper.registerMoon(SolarSystemBodies.planetNeptune, "proteus", GalaxySpace.ASSET_PREFIX, WorldProviderProteus.class, dimensionIDProteus, 6, 3.1415927F, 0.0017F, 10.0F, 50.0F);
 
+        orbitEarth = BodiesHelper.registerMoon(GalacticraftCore.planetOverworld, "spaceStation", ImpactGalacticModule.TEXTURE_PATH, WorldProviderOrbit.class, dimensionIDOrbitEarth, 1, 3.1415927F, 0.2667F, 10.0F, 1 / 0.01F);
 
         SSBodies.registrycelestial();
         SSBodies.registryteleport();
