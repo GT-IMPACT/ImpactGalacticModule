@@ -52,18 +52,16 @@ minecraft {
 
 repositories {}
 
+configurations {
+    implementation.extendsFrom(shadowImplementation)
+    mods
+    provided
+    embedded
+    compile.extendsFrom provided, embedded
+}
+
 dependencies {
-    compile files("lib/GalaxySpace-1.2.14.02-impact-dev.jar")
-    compile files("lib/buildcraft-7.1.13-dev.jar")
-    compile files("lib/CodeChickenCore-1.7.10-1.0.7.47-universal.jar")
-    compile files("lib/CodeChickenLib-1.7.10-1.1.3.138-universal.jar")
-    compile files("lib/EnderCore-0.2.0-(39).jar")
-    compile files("lib/Galacticraft-3.0.12.505-impact-dev.jar")
-    compile files("lib/industrialcraft-2-2.2.829-impact.jar")
-    compile files("lib/Mantle-1.7.10-0.3.2b.jar")
-    compile files("lib/MicdoodleCore-3.0.15-GTNH-(2).jar")
-    compile files("lib/NotEnoughItems-2.0.4-GTNH-(22).jar")
-    compile files("lib/TConstruct-1.7.10-1.8.9.12-GTNH.jar")
+    provided fileTree(dir: 'lib/', include:'*.jar')
 }
 
 processResources {
